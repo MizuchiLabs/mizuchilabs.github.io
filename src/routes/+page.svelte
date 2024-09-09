@@ -6,9 +6,6 @@
 	let activeProjects: any[] = [];
 	let inactiveProjects: any[] = [];
 
-	// Only display these projects
-	let watch: string[] = ['mantrae'];
-
 	onMount(async () => {
 		const res = await fetch('https://api.github.com/users/mizuchilabs/repos');
 		if (res.ok) {
@@ -22,10 +19,11 @@
 				stars: repo.stargazers_count,
 				forks: repo.forks_count,
 				license: repo.license?.name,
+				topics: repo.topics,
 				archived: repo.archived
 			}));
-			activeProjects = projects.filter((repo: any) => !repo.archived && repo.name.includes(watch));
-			inactiveProjects = projects.filter((repo: any) => repo.archived && repo.name.includes(watch));
+			activeProjects = projects.filter((repo: any) => !repo.archived && repo.topics?.length > 0);
+			inactiveProjects = projects.filter((repo: any) => repo.archived && repo.topics?.length > 0);
 		}
 	});
 </script>
