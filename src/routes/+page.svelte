@@ -38,7 +38,7 @@
 			<Card.Root class="w-[350px]">
 				<Card.Header>
 					<Card.Title class="flex flex-row items-center justify-between gap-2 py-2 font-semibold">
-						{project.name}
+						{project.name.charAt(0).toUpperCase() + project.name.slice(1)}
 
 						<div class="flex flex-row items-center gap-1">
 							<div class="flex flex-row items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5">
@@ -84,7 +84,7 @@
 			<Card.Root class="w-[350px]">
 				<Card.Header>
 					<Card.Title class="flex flex-row items-center justify-between gap-2 py-2 font-semibold">
-						{project.name}
+						{project.name.charAt(0).toUpperCase() + project.name.slice(1)}
 
 						<div class="flex flex-row items-center gap-1">
 							<div class="flex flex-row items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5">

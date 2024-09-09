@@ -7,10 +7,7 @@ const config = {
 	// for more information about preprocessors
 	preprocess: [vitePreprocess({ postcss: true })],
 	kit: {
-		adapter: adapter(),
-		paths: {
-			base: process.env.NODE_ENV === 'production' ? '/mizuchilabs.github.io' : '/'
-		}
+		adapter: adapter()
 	}
 };
 
