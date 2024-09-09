@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import Button from '../ui/button/button.svelte';
 
-	let darkMode = true;
+	let darkMode = false;
 
 	function handleSwitchDarkMode() {
 		darkMode = !darkMode;
