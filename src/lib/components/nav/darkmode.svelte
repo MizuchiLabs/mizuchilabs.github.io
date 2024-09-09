@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
 	import Button from '../ui/button/button.svelte';
 
 	let darkMode = false;
@@ -13,18 +13,21 @@
 			: document.documentElement.classList.remove('dark');
 	}
 
-	if (browser) {
-		if (
-			localStorage.darkmode === 'dark' ||
-			(!('darkmode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			document.documentElement.classList.add('dark');
-			darkMode = true;
-		} else {
-			document.documentElement.classList.remove('dark');
-			darkMode = false;
+	onMount(() => {
+		switch (localStorage.darkmode) {
+			case 'dark':
+				document.documentElement.classList.add('dark');
+				darkMode = true;
+				break;
+			case 'light':
+				document.documentElement.classList.remove('dark');
+				darkMode = false;
+				break;
+			default:
+				localStorage.setItem('darkmode', 'light');
+				darkMode = false;
 		}
-	}
+	});
 </script>
 
 <Button variant="ghost" on:click={handleSwitchDarkMode} class="!bg-transparent hover:text-primary">
