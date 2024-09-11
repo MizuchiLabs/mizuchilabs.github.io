@@ -52,12 +52,12 @@
 					</Card.Title>
 					<Card.Description>{project.description}</Card.Description>
 				</Card.Header>
-				<Card.Content class="flex flex-row gap-2">
+				<Card.Content class="flex flex-row gap-4">
 					<Button
 						variant="secondary"
 						href={project.repoUrl}
 						target="_blank"
-						class="bg-primary/35 font-semibold"
+						class="bg-primary/25 font-semibold hover:bg-primary/50"
 					>
 						View Repo
 					</Button>
@@ -66,7 +66,7 @@
 							variant="outline"
 							href={project.pageUrl}
 							target="_blank"
-							class="border-primary/35 font-semibold"
+							class="bg-background-muted border-primary/35 font-semibold hover:bg-primary/20"
 						>
 							Documentation
 						</Button>
@@ -98,12 +98,12 @@
 					</Card.Title>
 					<Card.Description>{project.description}</Card.Description>
 				</Card.Header>
-				<Card.Content class="flex flex-row gap-2">
+				<Card.Content class="flex flex-row gap-4">
 					<Button
 						variant="secondary"
 						href={project.repoUrl}
 						target="_blank"
-						class="bg-primary/35 font-semibold"
+						class="bg-primary/25 font-semibold hover:bg-primary/50"
 					>
 						View Repo
 					</Button>
@@ -112,7 +112,7 @@
 							variant="outline"
 							href={project.pageUrl}
 							target="_blank"
-							class="border-primary/35 font-semibold"
+							class="bg-background-muted border-primary/35 font-semibold hover:bg-primary/20"
 						>
 							Documentation
 						</Button>

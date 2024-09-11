@@ -3,7 +3,7 @@
 	import Darkmode from './darkmode.svelte';
 </script>
 
-<header class="w-full py-3 shadow-md dark:bg-pink-800/50">
+<header class="w-full bg-primary/10 py-3 shadow-md backdrop-blur-sm">
 	<div class="container mx-auto flex items-center justify-between">
 		<div class="flex flex-row items-center gap-4">
 			<img src={logo} alt="Mizuchi Labs Logo" width="40" />

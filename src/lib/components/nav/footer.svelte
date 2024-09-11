@@ -2,23 +2,23 @@
 </script>
 
 <footer
-	class="bottom-0 flex h-52 w-full flex-col items-center justify-between gap-4 bg-rose-300/50 py-4 dark:bg-pink-800/50"
+	class="py-38 bottom-0 flex h-52 w-full flex-col items-center justify-between gap-4 bg-primary/10 backdrop-blur-sm"
 >
 	<div
 		class="container flex flex-row items-center justify-between gap-4 pt-8 font-mono text-xl text-primary"
 	>
 		<span></span>
-		<div>
+		<div class="flex flex-row items-center gap-1">
 			<span class="opacity-25">Mizuchi</span>
 			<span class="opacity-40">Labs</span>
 		</div>
 	</div>
 
 	<div
-		class="container flex flex-row items-center justify-between gap-4 border-t border-primary/15 pt-4"
+		class="container flex flex-row items-center justify-between gap-4 border-t border-primary/25 py-4"
 	>
 		<!-- Copyright -->
-		<div class="flex flex-row items-center gap-1 text-black/70">
+		<div class="flex flex-row items-center gap-1 text-muted-foreground">
 			<iconify-icon icon="fa-regular:copyright" width="16" />
 			<span class="font-mono text-xs">
 				{new Date().getFullYear()} Mizuchi Labs
@@ -27,7 +27,7 @@
 
 		<!-- Social Links -->
 		<div class="flex flex-row items-center gap-2">
-			<span class="font-mono text-sm italic text-black/70">Made with</span>
+			<span class="font-mono text-sm italic text-muted-foreground">Made with</span>
 			<iconify-icon icon="fluent-emoji-flat:dragon-face" width="24" />
 		</div>
 	</div>
