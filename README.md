@@ -1,1 +1,1 @@
-# Mizuchi Labs Personal Website
+# Mizuchi Labs
