@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { Button } from '$lib/components/ui/button/index';
 	import logo from '$lib/images/logo.svg';
 	import Darkmode from './darkmode.svelte';
+	import { Github, Coffee } from 'lucide-svelte';
 </script>
 
 <header class="w-full bg-primary/10 py-3 shadow-md backdrop-blur-sm">
@@ -13,10 +15,27 @@
 			</div>
 		</div>
 		<nav>
-			<a href="https://github.com/mizuchilabs" class="hover:text-primary" target="_blank">
-				<iconify-icon icon="line-md:github-loop" width="24" />
-			</a>
-			<Darkmode />
+			<div class="flex flex-row items-center">
+				<Button
+					variant="ghost"
+					href="https://github.com/mizuchilabs"
+					target="_blank"
+					size="icon"
+					class="!bg-transparent hover:text-primary"
+				>
+					<Github />
+				</Button>
+				<Button
+					variant="ghost"
+					href="https://buymeacoffee.com/d34dscene"
+					target="_blank"
+					size="icon"
+					class="mr-2 !bg-transparent hover:text-primary"
+				>
+					<Coffee />
+				</Button>
+				<Darkmode />
+			</div>
 		</nav>
 	</div>
 </header>

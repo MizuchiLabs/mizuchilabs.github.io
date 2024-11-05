@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import Button from '../ui/button/button.svelte';
+	import { Moon, Sun } from 'lucide-svelte';
 
 	let darkMode = false;
 
@@ -30,10 +31,15 @@
 	});
 </script>
 
-<Button variant="ghost" on:click={handleSwitchDarkMode} class="!bg-transparent hover:text-primary">
+<Button
+	variant="ghost"
+	on:click={handleSwitchDarkMode}
+	class="!bg-transparent hover:text-primary"
+	size="icon"
+>
 	{#if darkMode}
-		<iconify-icon icon="line-md:sunny-outline-to-moon-loop-transition" width="24" />
+		<Moon />
 	{:else}
-		<iconify-icon icon="line-md:moon-alt-to-sunny-outline-loop-transition" width="24" />
+		<Sun />
 	{/if}
 </Button>
